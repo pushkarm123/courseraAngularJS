@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myFirstApp">
   <head>
     <meta charset="utf-8">
-    <title>Hello Coursera AngularJS</title>
+    <title>AngularJS Course</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
   </head>
   <body>
-    <h1>Hello Coursera AngularJS 1</h1>
+    <h1>My First AngularJS app</h1>
+    <div ng-controller="LunchController">
+      List Items for Lunch -
+      <input type="text" ng-model="lunchItems">
+      <br>
+      <input type="button" value="Check If Too Much" ng-click="getItems();">
+      <div>{{message}}</div>
+    </div>
   </body>
 </html>
