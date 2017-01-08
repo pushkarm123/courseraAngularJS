@@ -2,7 +2,10 @@
   'use strict'
 
   angular.module('firstAssignment', [])
-  .controller('LunchController', function ($scope) {
+  .controller('LunchController', LunchController);
+
+  LunchController.$inject = ['$scope'];
+  function LunchController($scope) {
     $scope.lunchItems = "";
 
     $scope.getItems = function () {
@@ -19,6 +22,6 @@
       $scope.message = "Enjoy!";
     };
 
-});
+}
 
 })();
